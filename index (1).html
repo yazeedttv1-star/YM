@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="YM Academy – منصة تعليمية احترافية لتعلم HTML و CSS و JavaScript من الصفر حتى الاحتراف" />
+  <meta name="keywords" content="تعلم HTML, تعلم CSS, تعلم JavaScript, برمجة عربي, YM Academy" />
+  <meta name="author" content="YM Academy" />
+  <title>YM Academy – تعلّم البرمجة باحترافية</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>" />
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header" id="header">
+    <div class="header-inner container">
+
+      <a href="#hero" class="logo" aria-label="YM Academy الرئيسية">
+        <span class="logo-badge">YM</span>
+        <span class="logo-text">Academy</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="التنقل الرئيسي">
+        <ul class="nav-list">
+          <li><a href="#hero"    class="nav-link">الرئيسية</a></li>
+          <li><a href="#courses" class="nav-link">الكورسات</a></li>
+          <li><a href="#sandbox" class="nav-link">المحرر</a></li>
+          <li><a href="#faq"     class="nav-link">الأسئلة الشائعة</a></li>
+          <li><a href="#courses" class="nav-link nav-cta">ابدأ الآن</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="فتح القائمة" aria-expanded="false" aria-controls="nav">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="hero" id="hero" aria-labelledby="hero-title">
+    <div class="hero-bg-grid" aria-hidden="true"></div>
+    <div class="hero-orbs" aria-hidden="true">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+
+    <div class="container hero-content">
+      <div class="hero-eyebrow" data-animate="fade-up">
+        <span class="dot dot-html"></span> HTML &nbsp;·&nbsp;
+        <span class="dot dot-css"></span> CSS &nbsp;·&nbsp;
+        <span class="dot dot-js"></span> JavaScript
+      </div>
+
+      <h1 class="hero-title" id="hero-title" data-animate="fade-up" data-delay="100">
+        حوّل أفكارك إلى<br />
+        <span class="gradient-text">تجارب رقمية</span><br />
+        لا تُنسى
+      </h1>
+
+      <p class="hero-sub" data-animate="fade-up" data-delay="200">
+        تعلّم بناء مواقع الويب من الصفر بأسلوب عملي وشرح بالعربي.
+        من الهيكل إلى التصميم إلى التفاعل – كل شيء في مكان واحد.
+      </p>
+
+      <div class="hero-actions" data-animate="fade-up" data-delay="300">
+        <a href="#courses" class="btn btn-primary">
+          ابدأ رحلتك الآن
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#sandbox" class="btn btn-ghost">جرّب المحرر الحي</a>
+      </div>
+
+      <div class="hero-stats" data-animate="fade-up" data-delay="400">
+        <div class="stat">
+          <span class="stat-num">9</span>
+          <span class="stat-label">درس متخصص</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num">3</span>
+          <span class="stat-label">لغات برمجية</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num">∞</span>
+          <span class="stat-label">محرر تفاعلي</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- ==================== COURSES / LEARNING HUB ==================== -->
+  <section class="courses" id="courses" aria-labelledby="courses-title">
+    <div class="container">
+
+      <div class="section-header" data-animate="fade-up">
+        <p class="section-eyebrow">المنهج التعليمي</p>
+        <h2 class="section-title" id="courses-title">اختر لغتك وابدأ</h2>
+        <p class="section-sub">كل قسم مُصمَّم ليأخذك من الصفر إلى بناء مشاريع حقيقية بخطوات واضحة.</p>
+      </div>
+
+      <!-- TAB BUTTONS -->
+      <div class="tabs" role="tablist" aria-label="اختيار اللغة البرمجية" data-animate="fade-up">
+        <button class="tab-btn active" role="tab" aria-selected="true"  aria-controls="tab-html" id="btn-html" data-lang="html">
+          <span class="tab-icon" aria-hidden="true">&#60;/&#62;</span>
+          HTML
+        </button>
+        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-css"  id="btn-css"  data-lang="css">
+          <span class="tab-icon" aria-hidden="true">#</span>
+          CSS
+        </button>
+        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-js"   id="btn-js"   data-lang="js">
+          <span class="tab-icon" aria-hidden="true">JS</span>
+          JavaScript
+        </button>
+      </div>
+
+      <!-- ===== TAB: HTML ===== -->
+      <div class="tab-panel active" role="tabpanel" id="tab-html" aria-labelledby="btn-html">
+
+        <div class="lessons-grid">
+
+          <!-- LESSON 1 -->
+          <article class="lesson-card" data-animate="fade-up">
+            <div class="lesson-header html-accent">
+              <span class="lesson-num">01</span>
+              <span class="lesson-badge">مبتدئ</span>
+            </div>
+            <h3 class="lesson-title">ما هو HTML؟ وكيف يعمل؟</h3>
+            <p class="lesson-desc">
+              HTML هو اختصار لـ <em>HyperText Markup Language</em>، وهو الهيكل الأساسي لأي صفحة ويب.
+              فكّر فيه كـ"عظام الجسم" – يحدد ما يوجد في الصفحة وترتيبه، لكن بدون تصميم بعد.
+              المتصفح يقرأ ملف HTML ويحوله إلى محتوى مرئي أمامك.
+            </p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-dots" aria-hidden="true">
+                  <i></i><i></i><i></i>
+                </span>
+                <span class="code-lang">HTML</span>
+              </div>
+              <pre class="code-content"><code><span class="ck-tag">&lt;!DOCTYPE html&gt;</span>
+<span class="ck-tag">&lt;html</span> <span class="ck-attr">lang</span>=<span class="ck-str">"ar"</span><span class="ck-tag">&gt;</span>
+  <span class="ck-tag">&lt;head&gt;</span>
+    <span class="ck-tag">&lt;meta</span> <span class="ck-attr">charset</span>=<span class="ck-str">"UTF-8"</span><span class="ck-tag">&gt;</span>
+    <span class="ck-tag">&lt;title&gt;</span>صفحتي الأولى<span class="ck-tag">&lt;/title&gt;</span>
+  <span class="ck-tag">&lt;/head&gt;</span>
+  <span class="ck-tag">&lt;body&gt;</span>
+    <span class="ck-comment">&lt;!-- هنا يظهر المحتوى للمستخدم --&gt;</span>
+    <span class="ck-tag">&lt;h1&gt;</span>مرحبا بالعالم!<span class="ck-tag">&lt;/h1&gt;</span>
+  <span class="ck-tag">&lt;/body&gt;</span>
+<span class="ck-tag">&lt;/html&gt;</span></code></pre>
+            </div>
+            <div class="lesson-tip">
+              <span class="tip-icon" aria-hidden="true">💡</span>
+              كل ملف HTML يبدأ بـ <code>&lt;!DOCTYPE html&gt;</code> ليُخبر المتصفح بإصدار HTML المستخدم.
+            </div>
+          </article>
+
+          <!-- LESSON 2 -->
+          <article class="lesson-card" data-animate="fade-up" data-delay="100">
+            <div class="lesson-header html-accent">
+              <span class="lesson-num">02</span>
+              <span class="lesson-badge">أساسي</span>
+            </div>
+            <h3 class="lesson-title">العناصر والوسوم الأساسية</h3>
+            <p class="lesson-desc">
+              HTML يتكون من <strong>وسوم (Tags)</strong> تُغلف المحتوى. معظم الوسوم لها وسم فتح وإغلاق.
+              العناوين من <code>&lt;h1&gt;</code> إلى <code>&lt;h6&gt;</code>، والفقرات <code>&lt;p&gt;</code>،
+              والروابط <code>&lt;a&gt;</code>، والصور <code>&lt;img&gt;</code> من أهم عناصر HTML التي ستستخدمها يومياً.
+            </p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="code-lang">HTML</span>
+              </div>
+              <pre class="code-content"><code><span class="ck-comment">&lt;!-- العناوين --&gt;</span>
+<span class="ck-tag">&lt;h1&gt;</span>عنوان رئيسي (الأكبر)<span class="ck-tag">&lt;/h1&gt;</span>
+<span class="ck-tag">&lt;h2&gt;</span>عنوان ثانوي<span class="ck-tag">&lt;/h2&gt;</span>
+<span class="ck-tag">&lt;h3&gt;</span>عنوان ثالثي<span class="ck-tag">&lt;/h3&gt;</span>
+
+<span class="ck-comment">&lt;!-- الفقرة والرابط والصورة --&gt;</span>
+<span class="ck-tag">&lt;p&gt;</span>هذه فقرة نصية عادية.<span class="ck-tag">&lt;/p&gt;</span>
+
+<span class="ck-tag">&lt;a</span> <span class="ck-attr">href</span>=<span class="ck-str">"https://example.com"</span><span class="ck-tag">&gt;</span>
+  اضغط هنا
+<span class="ck-tag">&lt;/a&gt;</span>
+
+<span class="ck-tag">&lt;img</span>
+  <span class="ck-attr">src</span>=<span class="ck-str">"photo.jpg"</span>
+  <span class="ck-attr">alt</span>=<span class="ck-str">"وصف الصورة"</span>
+<span class="ck-tag">&gt;</span></code></pre>
+            </div>
+            <div class="lesson-tip">
+              <span class="tip-icon" aria-hidden="true">💡</span>
+              وسم <code>&lt;img&gt;</code> لا يحتاج وسم إغلاق – يُسمى وسماً مفرداً (Self-closing tag).
+            </div>
+          </article>
+
+          <!-- LESSON 3 -->
+          <article class="lesson-card" data-animate="fade-up" data-delay="200">
+            <div class="lesson-header html-accent">
+              <span class="lesson-num">03</span>
+              <span class="lesson-badge">تطبيقي</span>
+            </div>
+            <h3 class="lesson-title">بناء نموذج HTML كامل</h3>
+            <p class="lesson-desc">
+              الآن نطبّق: سنبني هيكل صفحة ويب حقيقية تحتوي على قسم ترحيبي، قائمة تنقل، وقسم محتوى.
+              سنستخدم وسوم التخطيط الدلالية مثل <code>&lt;header&gt;</code>، <code>&lt;nav&gt;</code>،
+              <code>&lt;main&gt;</code>، و<code>&lt;footer&gt;</code> لهيكل احترافي وصديق لـ SEO.
+            </p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="code-lang">HTML – صفحة كاملة</span>
+              </div>
+              <pre class="code-content"><code><span class="ck-tag">&lt;body&gt;</span>
+
+  <span class="ck-tag">&lt;header&gt;</span>
+    <span class="ck-tag">&lt;nav&gt;</span>
+      <span class="ck-tag">&lt;a</span> <span class="ck-attr">href</span>=<span class="ck-str">"/"</span><span class="ck-tag">&gt;</span>الشعار<span class="ck-tag">&lt;/a&gt;</span>
+      <span class="ck-tag">&lt;ul&gt;</span>
+        <span class="ck-tag">&lt;li&gt;&lt;a</span> <span class="ck-attr">href</span>=<span class="ck-str">"#about"</span><span class="ck-tag">&gt;</span>عنّا<span class="ck-tag">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="ck-tag">&lt;li&gt;&lt;a</span> <span class="ck-attr">href</span>=<span class="ck-str">"#contact"</span><span class="ck-tag">&gt;</span>تواصل<span class="ck-tag">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="ck-tag">&lt;/ul&gt;</span>
+    <span class="ck-tag">&lt;/nav&gt;</span>
+  <span class="ck-tag">&lt;/header&gt;</span>
+
+  <span class="ck-tag">&lt;main&gt;</span>
+    <span class="ck-tag">&lt;section</span> <span class="ck-attr">id</span>=<span class="ck-str">"about"</span><span class="ck-tag">&gt;</span>
+      <span class="ck-tag">&lt;h1&gt;</span>مرحباً بك!<span class="ck-tag">&lt;/h1&gt;</span>
+      <span class="ck-tag">&lt;p&gt;</span>هذه صفحتي الأولى.<span class="ck-tag">&lt;/p&gt;</span>
+    <span class="ck-tag">&lt;/section&gt;</span>
+  <span class="ck-tag">&lt;/main&gt;</span>
+
+  <span class="ck-tag">&lt;footer&gt;</span>
+    <span class="ck-tag">&lt;p&gt;</span>© 2025 اسمي<span class="ck-tag">&lt;/p&gt;</span>
+  <span class="ck-tag">&lt;/footer&gt;</span>
+
+<span class="ck-tag">&lt;/body&gt;</span></code></pre>
+            </div>
+            <div class="lesson-tip">
+              <span class="tip-icon" aria-hidden="true">💡</span>
+              استخدام الوسوم الدلالية مثل <code>&lt;main&gt;</code> و<code>&lt;footer&gt;</code> يُحسّن ترتيب موقعك في محركات البحث.
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- ===== TAB: CSS ===== -->
+      <div class="tab-panel" role="tabpanel" id="tab-css" aria-labelledby="btn-css" hidden>
+        <div class="lessons-grid">
+
+          <!-- CSS LESSON 1 -->
+          <article class="lesson-card" data-animate="fade-up">
+            <div class="lesson-header css-accent">
+              <span class="lesson-num">01</span>
+              <span class="lesson-badge">مبتدئ</span>
+            </div>
+            <h3 class="lesson-title">ما هو CSS وكيف يعمل؟</h3>
+            <p class="lesson-desc">
+              CSS هو اختصار لـ <em>Cascading Style Sheets</em>، وهو اللغة المسؤولة عن مظهر صفحات الويب وتصميمها.
+              إذا كان HTML هو العظام، فـ CSS هو الجلد والملابس. يمكنك تغيير الألوان، الخطوط، المسافات،
+              وحتى إضافة حركات رائعة باستخدام CSS فقط.
+            </p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="code-lang">CSS</span>
+              </div>
+              <pre class="code-content"><code><span class="ck-comment">/* تنسيق العنوان الرئيسي */</span>
+<span class="ck-selector">h1</span> {
+  <span class="ck-prop">color</span>: <span class="ck-val">#FF6B35</span>;
+  <span class="ck-prop">font-size</span>: <span class="ck-val">2.5rem</span>;
+  <span class="ck-prop">font-weight</span>: <span class="ck-val">700</span>;
+  <span class="ck-prop">text-align</span>: <span class="ck-val">center</span>;
+}
+
+<span class="ck-comment">/* تنسيق الفقرات */</span>
+<span class="ck-selector">p</span> {
+  <span class="ck-prop">color</span>: <span class="ck-val">#cccccc</span>;
+  <span class="ck-prop">font-size</span>: <span class="ck-val">1rem</span>;
+  <span class="ck-prop">line-height</span>: <span class="ck-val">1.8</span>;
+}</code></pre>
+            </div>
+            <div class="lesson-tip">
+              <span class="tip-icon" aria-hidden="true">💡</span>
+              "Cascading" تعني أن القواعد تتدفق من الأعلى إلى الأسفل – القاعدة الأخيرة تتغلب على السابقة إذا تعارضتا.
+            </div>
+          </article>
+
+          <!-- CSS LESSON 2 -->
+          <article class="lesson-card" data-animate="fade-up" data-delay="100">
+            <div class="lesson-header css-accent">
+              <span class="lesson-num">02</span>
+              <span class="lesson-badge">أساسي</span>
+            </div>
+            <h3 class="lesson-title">Flexbox – التخطيط المرن</h3>
+            <p class="lesson-desc">
+              Flexbox هو نظام CSS لترتيب العناصر في صف أو عمود بكل مرونة.
+              أصبح المعيار الأساسي لبناء القوائم والبطاقات والهيدر.
+              بخاصية واحدة <code>display: flex</code> تتحكم في توزيع العناصر بشكل احترافي.
+            </p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="code-lang">CSS – Flexbox</span>
+              </div>
+              <pre class="code-content"><code><span class="ck-comment">/* حاوية Flex */</span>
+<span class="ck-selector">.nav</span> {
+  <span class="ck-prop">display</span>: <span class="ck-val">flex</span>;
+  <span class="ck-prop">justify-content</span>: <span class="ck-val">space-between</span>;
+  <span class="ck-prop">align-items</span>: <span class="ck-val">center</span>;
+  <span class="ck-prop">gap</span>: <span class="ck-val">1rem</span>;
+}
+
+<span class="ck-comment">/* بطاقات بجانب بعضها */</span>
+<span class="ck-selector">.cards</span> {
+  <span class="ck-prop">display</span>: <span class="ck-val">flex</span>;
+  <span class="ck-prop">flex-wrap</span>: <span class="ck-val">wrap</span>;
+  <span class="ck-prop">gap</span>: <span class="ck-val">1.5rem</span>;
+  <span class="ck-prop">justify-content</span>: <span class="ck-val">center</span>;
+}
+
+<span class="ck-comment">/* كل بطاقة */</span>
+<span class="ck-selector">.card</span> {
+  <span class="ck-prop">flex</span>: <span class="ck-val">1 1 280px</span>;
+  <span class="ck-prop">max-width</span>: <span class="ck-val">360px</span>;
+}</code></pre>
+            </div>
+            <div class="lesson-tip">
+              <span class="tip-icon" aria-hidden="true">💡</span>
+              <code>flex-wrap: wrap</code> يجعل العناصر تنزل إلى سطر جديد تلقائياً في الشاشات الصغيرة.
+            </div>
+          </article>
+
+          <!-- CSS LESSON 3 -->
+          <article class="lesson-card" data-animate="fade-up" data-delay="200">
+            <div class="lesson-header css-accent">
+              <span class="lesson-num">03</span>
+              <span class="lesson-badge">تطبيقي</span>
+            </div>
+            <h3 class="lesson-title">تصميم بطاقة احترافية من الصفر</h3>
+            <p class="lesson-desc">
+              سنبني بطاقة (Card) كاملة مع صورة، عنوان، نص، وزر – بكل تأثيراتها.
+              سنستخدم <code>border-radius</code> للحواف المدوّرة، و<code>box-shadow</code> للظل،
+              و<code>transition</code> لتأثير Hover ناعم يرفع البطاقة عند التمرير عليها.
+            </p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="code-lang">CSS – Card Component</span>
+              </div>
+              <pre class="code-content"><code><span class="ck-selector">.card</span> {
+  <span class="ck-prop">background</span>: <span class="ck-val">#1a1a2e</span>;
+  <span class="ck-prop">border-radius</span>: <span class="ck-val">16px</span>;
+  <span class="ck-prop">overflow</span>: <span class="ck-val">hidden</span>;
+  <span class="ck-prop">box-shadow</span>: <span class="ck-val">0 4px 20px rgba(0,0,0,0.3)</span>;
+  <span class="ck-prop">transition</span>: <span class="ck-val">transform 0.3s ease,
+              box-shadow 0.3s ease</span>;
+}
+
+<span class="ck-selector">.card:hover</span> {
+  <span class="ck-prop">transform</span>: <span class="ck-val">translateY(-8px)</span>;
+  <span class="ck-prop">box-shadow</span>: <span class="ck-val">0 16px 40px rgba(0,0,0,0.5)</span>;
+}
+
+<span class="ck-selector">.card img</span> {
+  <span class="ck-prop">width</span>: <span class="ck-val">100%</span>;
+  <span class="ck-prop">height</span>: <span class="ck-val">200px</span>;
+  <span class="ck-prop">object-fit</span>: <span class="ck-val">cover</span>;
+}
+
+<span class="ck-selector">.card-body</span> {
+  <span class="ck-prop">padding</span>: <span class="ck-val">1.5rem</span>;
+}
+
+<span class="ck-selector">.card-btn</span> {
+  <span class="ck-prop">display</span>: <span class="ck-val">inline-block</span>;
+  <span class="ck-prop">padding</span>: <span class="ck-val">0.6rem 1.4rem</span>;
+  <span class="ck-prop">background</span>: <span class="ck-val">#4ECDC4</span>;
+  <span class="ck-prop">color</span>: <span class="ck-val">#000</span>;
+  <span class="ck-prop">border-radius</span>: <span class="ck-val">8px</span>;
+  <span class="ck-prop">font-weight</span>: <span class="ck-val">600</span>;
+  <span class="ck-prop">text-decoration</span>: <span class="ck-val">none</span>;
+}</code></pre>
+            </div>
+            <div class="lesson-tip">
+              <span class="tip-icon" aria-hidden="true">💡</span>
+              <code>object-fit: cover</code> يجعل الصور تملأ حاويتها بدون تشويه حتى لو أبعادها مختلفة.
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- ===== TAB: JAVASCRIPT ===== -->
+      <div class="tab-panel" role="tabpanel" id="tab-js" aria-labelledby="btn-js" hidden>
+        <div class="lessons-grid">
+
+          <!-- JS LESSON 1 -->
+          <article class="lesson-card" data-animate="fade-up">
+            <div class="lesson-header js-accent">
+              <span class="lesson-num">01</span>
+              <span class="lesson-badge">مبتدئ</span>
+            </div>
+            <h3 class="lesson-title">ما هو JavaScript ولماذا نحتاجه؟</h3>
+            <p class="lesson-desc">
+              JavaScript هي لغة البرمجة الوحيدة التي يفهمها المتصفح بشكل مباشر.
+              تُضيف التفاعل والحركة والمنطق للصفحة. بها تصنع القوائم المنسدلة،
+              تحقق من النماذج، تحمّل البيانات بدون إعادة تحميل الصفحة، وتبني تطبيقات كاملة.
+            </p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="code-lang">JavaScript</span>
+              </div>
+              <pre class="code-content"><code><span class="ck-comment">// المتغيرات – طريقة تخزين القيم</span>
+<span class="ck-kw">const</span> name = <span class="ck-str">"أحمد"</span>;
+<span class="ck-kw">let</span>   age  = <span class="ck-num">25</span>;
+<span class="ck-kw">var</span>   city = <span class="ck-str">"الرياض"</span>; <span class="ck-comment">// قديم، تجنّبه</span>
+
+<span class="ck-comment">// إظهار قيمة في الكونسول</span>
+console.<span class="ck-fn">log</span>(name);      <span class="ck-comment">// "أحمد"</span>
+console.<span class="ck-fn">log</span>(age + <span class="ck-num">5</span>);   <span class="ck-comment">// 30</span>
+
+<span class="ck-comment">// رسالة تنبيه للمستخدم</span>
+<span class="ck-fn">alert</span>(<span class="ck-str">"مرحباً بك يا "</span> + name);</code></pre>
+            </div>
+            <div class="lesson-tip">
+              <span class="tip-icon" aria-hidden="true">💡</span>
+              استخدم <code>const</code> دائماً إذا القيمة لن تتغير، و<code>let</code> إذا ستتغير. تجنّب <code>var</code> في الكود الحديث.
+            </div>
+          </article>
+
+          <!-- JS LESSON 2 -->
+          <article class="lesson-card" data-animate="fade-up" data-delay="100">
+            <div class="lesson-header js-accent">
+              <span class="lesson-num">02</span>
+              <span class="lesson-badge">أساسي</span>
+            </div>
+            <h3 class="lesson-title">التحكم في DOM – تغيير الصفحة حياً</h3>
+            <p class="lesson-desc">
+              DOM اختصار لـ <em>Document Object Model</em>، وهو تمثيل الصفحة كشجرة من العناصر.
+              JavaScript تتيح لك الوصول إلى أي عنصر وتغييره – نصه، لونه، حجمه، إخفاءه،
+              أو إضافة عناصر جديدة لحظياً بدون إعادة تحميل الصفحة.
+            </p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="code-lang">JavaScript – DOM</span>
+              </div>
+              <pre class="code-content"><code><span class="ck-comment">// اختيار عنصر من الصفحة</span>
+<span class="ck-kw">const</span> title = document.<span class="ck-fn">querySelector</span>(<span class="ck-str">"h1"</span>);
+<span class="ck-kw">const</span> btn   = document.<span class="ck-fn">getElementById</span>(<span class="ck-str">"myBtn"</span>);
+
+<span class="ck-comment">// تغيير النص واللون</span>
+title.textContent = <span class="ck-str">"عنوان جديد!"</span>;
+title.style.color  = <span class="ck-str">"#FFE66D"</span>;
+
+<span class="ck-comment">// إضافة حدث عند الضغط</span>
+btn.<span class="ck-fn">addEventListener</span>(<span class="ck-str">"click"</span>, <span class="ck-kw">function</span>() {
+  title.textContent = <span class="ck-str">"تم الضغط على الزر!"</span>;
+  title.style.color = <span class="ck-str">"#FF6B35"</span>;
+});
+
+<span class="ck-comment">// إضافة/حذف class</span>
+title.classList.<span class="ck-fn">add</span>(<span class="ck-str">"active"</span>);
+title.classList.<span class="ck-fn">toggle</span>(<span class="ck-str">"hidden"</span>);</code></pre>
+            </div>
+            <div class="lesson-tip">
+              <span class="tip-icon" aria-hidden="true">💡</span>
+              <code>querySelector</code> يقبل أي CSS selector مثل <code>".card"</code> أو <code>"#nav"</code>، وهو أقوى من <code>getElementById</code>.
+            </div>
+          </article>
+
+          <!-- JS LESSON 3 -->
+          <article class="lesson-card" data-animate="fade-up" data-delay="200">
+            <div class="lesson-header js-accent">
+              <span class="lesson-num">03</span>
+              <span class="lesson-badge">تطبيقي</span>
+            </div>
+            <h3 class="lesson-title">بناء مكوّن تفاعلي كامل</h3>
+            <p class="lesson-desc">
+              سنبني عداداً تفاعلياً (Counter) من الصفر يزيد وينقص ويُعيد التعيين.
+              هذا المثال يجمع كل المفاهيم: اختيار العناصر، التعامل مع الأحداث، تحديث الـ DOM،
+              والمنطق الشرطي – كل ما تحتاجه لبناء أي مكوّن تفاعلي.
+            </p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="code-lang">JavaScript – Counter Component</span>
+              </div>
+              <pre class="code-content"><code><span class="ck-comment">// HTML المطلوب:</span>
+<span class="ck-comment">// &lt;div id="counter"&gt;0&lt;/div&gt;</span>
+<span class="ck-comment">// &lt;button id="dec"&gt;-&lt;/button&gt;</span>
+<span class="ck-comment">// &lt;button id="inc"&gt;+&lt;/button&gt;</span>
+<span class="ck-comment">// &lt;button id="rst"&gt;إعادة&lt;/button&gt;</span>
+
+<span class="ck-kw">const</span> display = document.<span class="ck-fn">getElementById</span>(<span class="ck-str">"counter"</span>);
+<span class="ck-kw">const</span> decBtn  = document.<span class="ck-fn">getElementById</span>(<span class="ck-str">"dec"</span>);
+<span class="ck-kw">const</span> incBtn  = document.<span class="ck-fn">getElementById</span>(<span class="ck-str">"inc"</span>);
+<span class="ck-kw">const</span> rstBtn  = document.<span class="ck-fn">getElementById</span>(<span class="ck-str">"rst"</span>);
+
+<span class="ck-kw">let</span> count = <span class="ck-num">0</span>;
+
+<span class="ck-kw">function</span> <span class="ck-fn">updateDisplay</span>() {
+  display.textContent = count;
+  display.style.color = count > <span class="ck-num">0</span>
+    ? <span class="ck-str">"#4ECDC4"</span>
+    : count < <span class="ck-num">0</span>
+    ? <span class="ck-str">"#FF6B35"</span>
+    : <span class="ck-str">"#ffffff"</span>;
+}
+
+incBtn.<span class="ck-fn">addEventListener</span>(<span class="ck-str">"click"</span>, () => {
+  count++;
+  <span class="ck-fn">updateDisplay</span>();
+});
+
+decBtn.<span class="ck-fn">addEventListener</span>(<span class="ck-str">"click"</span>, () => {
+  count--;
+  <span class="ck-fn">updateDisplay</span>();
+});
+
+rstBtn.<span class="ck-fn">addEventListener</span>(<span class="ck-str">"click"</span>, () => {
+  count = <span class="ck-num">0</span>;
+  <span class="ck-fn">updateDisplay</span>();
+});</code></pre>
+            </div>
+            <div class="lesson-tip">
+              <span class="tip-icon" aria-hidden="true">💡</span>
+              Arrow functions (<code>() =></code>) هي طريقة كتابة Functions أحدث وأقصر – استخدمها في Callbacks مثل <code>addEventListener</code>.
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LIVE CODE SANDBOX ==================== -->
+  <section class="sandbox" id="sandbox" aria-labelledby="sandbox-title">
+    <div class="container">
+
+      <div class="section-header" data-animate="fade-up">
+        <p class="section-eyebrow">المحرر التفاعلي</p>
+        <h2 class="section-title" id="sandbox-title">جرّب وشوف النتيجة فوراً</h2>
+        <p class="section-sub">اكتب أي كود HTML أو CSS أو JS واضغط تشغيل – النتيجة تظهر أمامك مباشرة.</p>
+      </div>
+
+      <div class="sandbox-wrapper" data-animate="fade-up">
+
+        <!-- Quick Templates -->
+        <div class="sandbox-templates">
+          <span class="templates-label">أمثلة سريعة:</span>
+          <button class="tpl-btn tpl-html" id="tplHtml" aria-label="تحميل مثال HTML">
+            <span aria-hidden="true">&#60;/&#62;</span> HTML
+          </button>
+          <button class="tpl-btn tpl-css" id="tplCss" aria-label="تحميل مثال CSS">
+            <span aria-hidden="true">#</span> CSS
+          </button>
+          <button class="tpl-btn tpl-js" id="tplJs" aria-label="تحميل مثال JavaScript">
+            <span aria-hidden="true">JS</span> JavaScript
+          </button>
+        </div>
+
+        <div class="sandbox-main">
+
+          <!-- Editor Side -->
+          <div class="editor-side">
+            <div class="editor-topbar">
+              <div class="editor-dots" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="editor-label">المحرر</span>
+              <div class="editor-actions">
+                <button class="btn-run" id="runBtn" aria-label="تشغيل الكود">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                  تشغيل
+                </button>
+                <button class="btn-clear" id="clearBtn" aria-label="مسح المحرر">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/></svg>
+                  مسح
+                </button>
+              </div>
+            </div>
+            <div class="editor-body">
+              <div class="line-numbers" id="lineNumbers" aria-hidden="true">1</div>
+              <textarea
+                class="code-editor"
+                id="codeEditor"
+                spellcheck="false"
+                autocomplete="off"
+                autocorrect="off"
+                autocapitalize="off"
+                dir="ltr"
+                aria-label="محرر الكود"
+                placeholder="اكتب كودك هنا..."
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- Preview Side -->
+          <div class="preview-side">
+            <div class="preview-topbar">
+              <div class="editor-dots" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="editor-label">النتيجة</span>
+              <span class="preview-status" id="previewStatus">جاهز</span>
+            </div>
+            <iframe
+              class="preview-frame"
+              id="previewFrame"
+              title="نتيجة الكود"
+              sandbox="allow-scripts"
+            ></iframe>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ==================== -->
+  <section class="faq" id="faq" aria-labelledby="faq-title">
+    <div class="container">
+
+      <div class="section-header" data-animate="fade-up">
+        <p class="section-eyebrow">الأسئلة الشائعة</p>
+        <h2 class="section-title" id="faq-title">كل ما يدور في بالك</h2>
+        <p class="section-sub">أجوبة صادقة وواضحة على الأسئلة الأكثر شيوعاً بين المبتدئين.</p>
+      </div>
+
+      <div class="faq-list" data-animate="fade-up">
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>من أين أبدأ تعلم البرمجة؟</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>ابدأ بالترتيب: <strong>HTML أولاً</strong> لتتعلم هيكل الصفحات، ثم <strong>CSS</strong> للتصميم، ثم <strong>JavaScript</strong> للتفاعل. لا تقفز للـ Frameworks مثل React قبل إتقان هذه الثلاثة – الأساس هو كل شيء. منصتنا مصممة تحديداً لهذا الترتيب المنطقي.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>كم من الوقت يلزم لتعلم تطوير الويب؟</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>بتخصيص ساعة إلى ساعتين يومياً: <strong>HTML + CSS</strong> في 3-4 أسابيع، <strong>JavaScript الأساسيات</strong> في 2-3 أشهر، وبناء مشروعك الأول في 4-6 أشهر. الثبات والتطبيق اليومي أهم من عدد الساعات.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>هل أحتاج خبرة في الرياضيات أو الكمبيوتر؟</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>لا! تطوير الويب من أسهل المجالات البرمجية للمبتدئين. لا تحتاج رياضيات متقدمة ولا خلفية تقنية. تحتاج فقط <strong>جهاز وإنترنت ومتصفح</strong> وفضول حقيقي للتعلم – هذه المنصة تتولى الباقي.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>ما الفرق بين HTML و CSS و JavaScript؟</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>تخيّل بناء بيت: <strong>HTML</strong> هو الهيكل (الجدران والأسقف والأبواب)، <strong>CSS</strong> هو الديكور والطلاء والأثاث، و<strong>JavaScript</strong> هو الكهرباء والسباكة – كل ما يجعل البيت "يعمل" ويتفاعل مع ساكنيه.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>هل يمكنني العمل في هذا المجال بعد تعلمه؟</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>بالتأكيد! تطوير الويب من أعلى المجالات طلباً في سوق العمل العالمي. بعد إتقان HTML وCSS وJavaScript، يمكنك العمل كـ <strong>Front-End Developer</strong>، فريلانسر، أو تأسيس مشاريعك الخاصة. الشركات تبحث عن محفظة مشاريع (Portfolio) أكثر من الشهادات.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>هل محرر الكود في المنصة يعمل بدون إنترنت؟</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>نعم! المحرر التفاعلي في المنصة يعمل بالكامل في المتصفح بدون خوادم أو إنترنت. بمجرد تحميل الصفحة، يمكنك كتابة الكود وتشغيله لحظياً. مبني بـ Vanilla JavaScript خالص لضمان السرعة والخفة.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <a href="#hero" class="logo" aria-label="YM Academy الرئيسية">
+          <span class="logo-badge">YM</span>
+          <span class="logo-text">Academy</span>
+        </a>
+        <p class="footer-tagline">تعلّم البرمجة بالعربي بأعلى معايير الاحترافية.</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h3 class="footer-col-title">الكورسات</h3>
+          <ul>
+            <li><a href="#courses" data-tab="html">تعلم HTML</a></li>
+            <li><a href="#courses" data-tab="css">تعلم CSS</a></li>
+            <li><a href="#courses" data-tab="js">تعلم JavaScript</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-col-title">الأدوات</h3>
+          <ul>
+            <li><a href="#sandbox">المحرر التفاعلي</a></li>
+            <li><a href="#faq">الأسئلة الشائعة</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>
+          صُنع بـ
+          <span aria-label="قلب" role="img">❤️</span>
+          لكل من يريد تعلم البرمجة &nbsp;·&nbsp;
+          <span class="footer-lang html-accent-text">HTML</span> ·
+          <span class="footer-lang css-accent-text">CSS</span> ·
+          <span class="footer-lang js-accent-text">JS</span>
+        </p>
+        <p class="footer-copy">&copy; <span id="footerYear"></span> YM Academy. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
